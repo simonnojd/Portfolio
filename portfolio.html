@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simon Nöjd</h1>
+      <div class="navbar">
+        <img src="images/logo.png" class="logo" alt="error" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="aboutMe.html">Om Mig</a></li>
+            <li><a href="portfolio.html" class="currentLink">Projekt</a></li>
+            <li><a href="skills.html">Kunskaper</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li>
+              <a
+                href="https://github.com/simonnojd?tab=repositories"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/simon-birgersson-n%C3%B6jd-7b086a171/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slideShow">
+        <div class="column">
+          <h2>
+            Detta är ett frågesportsspel gjort i Java. <br />Tryck på pilarna
+            för att titta på olika bilder av programmet.
+          </h2>
+          <img
+            class="mySlides"
+            src="images/quizKampen/logInQuiz.png"
+            alt="error"
+          />
+          <img
+            class="mySlides"
+            src="images/quizKampen/mainMenuQuiz.png"
+            alt="error"
+          />
+          <img
+            class="mySlides"
+            src="images/quizKampen/categoryQuiz.png"
+            alt="error"
+          />
+          <img
+            class="mySlides"
+            src="images/quizKampen/inGameQuiz.png"
+            alt="error"
+          />
+          <img
+            class="mySlides"
+            src="images/quizKampen/resultQuiz.png"
+            alt="error"
+          />
+          <button class="leftButton" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="rightButton" onclick="plusDivs(+1)">&#10095;</button>
+          <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            function plusDivs(n) {
+              showDivs((slideIndex += n));
+            }
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {
+                slideIndex = 1;
+              }
+              if (n < 1) {
+                slideIndex = x.length;
+              }
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              x[slideIndex - 1].style.display = "block";
+            }
+          </script>
+        </div>
+        <div class="column">
+          <h2>
+            Vi hade en uppgift att skapa en karakter där<br />
+            ansiktsuttryck och kroppsspråk beskriver känslor.
+            <br />Här är min karaktär som heter Fungalboi!
+          </h2>
+          <img src="images/fungalboi.jpg" alt="error" />
+        </div>
+      </div>
+      <div class="footer">
+        <hr />
+        <p>Copyright &copy; 2021 – SIMON NÖJD – simon.nojd.jobb@gmail.com</p>
+      </div>
+    </div>
+  </body>
+</html>
